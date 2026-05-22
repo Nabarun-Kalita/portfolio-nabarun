@@ -534,14 +534,11 @@
   .sports-gallery {
     margin-top: 32px;
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
-    height: 480px;
   }
   @media (max-width: 720px) {
-    .sports-gallery { grid-template-columns: 1fr; height: auto; gap: 12px; }
-    .sports-gallery .gallery-side { grid-template-columns: 1fr 1fr; height: 240px; }
-    .sports-gallery .gallery-main { height: 320px; }
+    .sports-gallery { grid-template-columns: 1fr; gap: 12px; }
   }
   .sports-gallery figure {
     position: relative;
@@ -550,6 +547,7 @@
     border: 0.5px solid var(--border);
     background: var(--accent-soft);
     margin: 0;
+    aspect-ratio: 4 / 5;
   }
   .sports-gallery img {
     width: 100%;
@@ -562,33 +560,14 @@
   .sports-gallery figcaption {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    padding: 20px 18px 14px;
+    padding: 24px 20px 18px;
     background: linear-gradient(to top, rgba(20, 15, 10, 0.78) 0%, rgba(20, 15, 10, 0.4) 50%, transparent 100%);
     color: #fcfaf7;
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: 15px;
     font-style: italic;
     letter-spacing: 0.2px;
     pointer-events: none;
-  }
-  .sports-gallery figcaption .cap-label {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-style: normal;
-    color: rgba(252, 250, 247, 0.7);
-    margin-bottom: 3px;
-  }
-  .sports-gallery .gallery-main { grid-row: 1 / span 2; }
-  .sports-gallery .gallery-side {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 16px;
-  }
-  @media (max-width: 720px) {
-    .sports-gallery .gallery-side { display: grid; grid-template-rows: 1fr; grid-template-columns: 1fr 1fr; gap: 12px; }
   }
 
   /* ---------- Leadership ---------- */
@@ -999,7 +978,7 @@
       <div class="sport-card featured">
         <span class="sport-icon">🏸</span>
         <h4>Badminton</h4>
-        <p>National-level player. Repped my state at Khelo India and led NIT Silchar to the All-India Inter-NIT Games — twice.</p>
+        <p>National-level player. Repped my state at Khelo India and competed across other national-level tournaments.</p>
       </div>
       <div class="sport-card">
         <span class="sport-icon">⚽</span>
@@ -1020,29 +999,14 @@
   </div>
 
   <div class="sports-gallery reveal">
-    <figure class="gallery-main">
-      <img src="images/badminton-smash.jpg" alt="Nabarun playing badminton — mid-air smash" loading="lazy" />
-      <figcaption>
-        <span class="cap-label">Badminton · Smash</span>
-        Mid-flight, racket cocked. The fun part.
-      </figcaption>
+    <figure>
+      <img src="images/badminton-run.jpg" alt="Nabarun chasing a shuttle on the court" loading="lazy" />
+      <figcaption>Chasing down a long rally.</figcaption>
     </figure>
-    <div class="gallery-side">
-      <figure>
-        <img src="images/badminton-run.jpg" alt="Nabarun chasing a shuttle on the court" loading="lazy" />
-        <figcaption>
-          <span class="cap-label">Khelo India</span>
-          Chasing down a long rally.
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="images/football.jpg" alt="Nabarun on the football pitch at NIT Silchar" loading="lazy" />
-        <figcaption>
-          <span class="cap-label">Inter-NIT · Football</span>
-          Reading the next pass.
-        </figcaption>
-      </figure>
-    </div>
+    <figure>
+      <img src="images/football.jpg" alt="Nabarun on the football pitch at NIT Silchar" loading="lazy" />
+      <figcaption>Reading the next pass.</figcaption>
+    </figure>
   </div>
 </section>
 
